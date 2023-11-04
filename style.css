@@ -20,6 +20,35 @@ body{
     line-height: 1.5;
 }
 
+/* social links */
+.social-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    margin: 30px;
+}
+
+.social-wrapper {
+    display: inline-flex;
+}
+
+.social-links {
+    color: var(--primaryColor);
+    text-decoration: none;
+    margin-left: 18px;
+    font-size: 18px;
+    display: inline-block;
+    text-align: right;
+    transition: var(--mainTransition);
+}
+
+.social-links:hover {
+    color: var(--mainWhite);
+    padding-top: 5px;
+}
+/* end social links */
+
 /* header */
 .header{
     background: linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .8)), url(./images/bg_img.jpeg) center/cover no-repeat fixed;
