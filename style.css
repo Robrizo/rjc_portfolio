@@ -69,8 +69,9 @@ body{
     color: var(--primaryColor);
     font-size: 64px;
     font-weight: bold;
-    animation: falling 5s ease-in-out 1;
     transition: var(--mainTransition);
+    /* animation */
+    animation: falling 5s ease-in-out 1;
 }
 
 .banner-subtitle{
@@ -93,9 +94,38 @@ body{
 
 .pencil-icon .fa{
     transition: var(--mainTransition);
+    /* animation */
     animation: slider 3s ease-in-out 5.5s infinite;
 }
 
+.header-btn{
+    margin-top: 60px;
+}
+
+.main-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: var(--primaryColor);
+    background: var(--mainWhite);
+    font-weight: bold;
+    padding: 8px;
+    text-transform: uppercase;
+    font-size: 24px;
+    letter-spacing: var(--letterSpacing);
+    outline: 1px solid var(--primaryColor);
+    outline-offset: 3px;
+    border-radius: 10px;
+    transition: var(--mainTransition);
+    /* animation */
+    animation: bounce-btn 3s ease-in-out 1;
+}
+
+.main-btn:hover{
+    transform: scale(0.9);
+    opacity: 0.8;
+}
+
+/* animation */
 @keyframes slider {
     0%{
         
@@ -112,7 +142,6 @@ body{
     }
 }
 
-/* animation */
 @keyframes falling {
     0% {
         transform: translateY(-1000px);
@@ -132,6 +161,22 @@ body{
 }
 
 @keyframes bounce-header {
+    0% {
+        transform: translateY(1000px);
+    }
+
+    50% {
+        transform: scale(1.5);
+        filter: blur(10px);
+    }
+
+    100% {
+        transform: scale(1);
+        color: var(--mainWhite);
+    }
+}
+
+@keyframes bounce-btn {
     0% {
         transform: translateY(1000px);
     }
